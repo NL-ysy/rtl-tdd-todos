@@ -6,6 +6,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Docker delivery
+```
+docker run -itd --name rtl-tdd-todos -p 3000:3000 node:16.14.0-bullseye
+docker commit rtl-tdd-todos mrsono0/ksa:rtl-tdd-todos
+docker container stop rtl-tdd-todos
+docker push mrsono0/ksa:rtl-tdd-todos
+docker pull mrsono0/ksa:rtl-tdd-todos
+```
+
+## Git remote config
+ID, PW는 윈도우즈 자격증명관리에 등록을 함
+```
+git remote add origin https://github.com/NL-ysy/rtl-tdd-todos.git
+git push -u origin main
+```
+
 ### `npm start`
 
 Runs the app in the development mode.\
